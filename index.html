@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>내 영화 보드</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+
+            <h1>내 영화 보드</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#mine">내 인생 영화</a></li>
+                    <li><a href="#boxoffice">박스오피스</a></li>
+                    <li><a href="detail.html">상세</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- 메인 소개 -->
+    <section class="hero">
+        <div class="hero-content">
+
+            <h2>재밌게 본 영화 여섯 편</h2>
+
+            <p>
+                제가 좋아하는 영화 여섯 편과 최근 극장가의 인기 영화 다섯 편을
+                한 보드에 걸었습니다.
+            </p>
+
+        </div>
+    </section>
+
+
+    <main>
+
+        <!-- 내 인생 영화 -->
+        <section id="mine">
+
+            <h2>내 인생 영화 6편</h2>
+
+            <!-- 검색 / 개수 / 찜 / 정렬 -->
+            <div class="toolbar">
+
+                <input id="q" type="search" placeholder="영화 제목 검색">
+
+                <p id="count">총 6편</p>
+
+                <p class="like-count">
+                    찜 <span id="likeCount">0</span>편
+                </p>
+
+                <label for="sort">정렬</label>
+
+                <select id="sort">
+                    <option value="rating">평점순</option>
+                    <option value="year">최신 개봉순</option>
+                    <option value="title">제목순</option>
+                </select>
+
+            </div>
+
+
+            <!-- JavaScript로 영화 카드 생성 -->
+            <section class="board" id="board">
+            </section>
+
+
+            <!-- 검색 결과가 없을 때 -->
+            <p class="state-empty">
+                조건에 맞는 영화가 없습니다.
+            </p>
+
+        </section>
+
+
+        <!-- 박스오피스 -->
+        <section id="boxoffice">
+
+            <h2>일별 박스오피스 TOP 5</h2>
+
+            <p class="basis">KOBIS 기준일 2026-10-26</p>
+
+            <div class="board">
+
+                <!-- 1위 치이카와 -->
+                <article class="card">
+
+                    <img class="poster"
+                        src="https://image.tmdb.org/t/p/w342/2sapvk8OG1rmaS2PquLnfyoMvOS.jpg"
+                        alt="치이카와 극장판 포스터">
+
+                    <span class="rank">1</span>
+                    <span class="badge">7.4</span>
+
+                    <div class="info">
+                        <h3>치이카와 극장판</h3>
+                        <p class="year">개봉 2026-07-24</p>
+                        <p class="audience">누적 2,268,257명</p>
+                        <p class="change">-</p>
+                        <p class="overview">
+                            거액의 보수와 공짜 음식을 준다는 전단지에 속아
+                            미지의 섬을 찾은 치이카와와 친구들의 이야기입니다.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <!-- 2위 암살자들 -->
+                <article class="card">
+
+                    <img class="poster"
+                        src="https://image.tmdb.org/t/p/w342/vxLkqJHsFmrnOg78KoTvwxXDTKo.jpg"
+                        alt="암살자들 포스터">
+
+                    <span class="rank">2</span>
+                    <span class="badge">7.2</span>
+
+                    <div class="info">
+                        <h3>암살자(들)</h3>
+                        <p class="year">개봉 2026-09-23</p>
+                        <p class="audience">누적 3,382,046명</p>
+                        <p class="change">-</p>
+                        <p class="overview">
+                            1974년 육영수 여사 피격 사건의 숨겨진 실체를 추적하며
+                            여러 의혹을 파헤치는 형사와 기자들의 이야기입니다.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <!-- 3위 설낙원 -->
+                <article class="card">
+
+                    <img class="poster"
+                        src="https://image.tmdb.org/t/p/w342/6DLBaO4pKBuEXeoHZCCpEVAqyKz.jpg"
+                        alt="설낙원 포스터">
+
+                    <span class="rank">3</span>
+                    <span class="badge">8.0</span>
+
+                    <div class="info">
+                        <h3>설낙원</h3>
+                        <p class="year">개봉 2026-10-21</p>
+                        <p class="audience">누적 112,191명</p>
+                        <p class="change">-</p>
+                        <p class="overview">
+                            9년 전 아들을 잃은 엄마 앞에 아들이 돌아오지만,
+                            낯설게 변해버린 모습에 엄마는 불안과 의심을 느끼기 시작합니다.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <!-- 4위 타짜 -->
+                <article class="card">
+
+                    <img class="poster"
+                        src="https://media.themoviedb.org/t/p/w300_and_h450_face/4w4TEDwrXFMpdZSI0xvaUAgiOc1.jpg"
+                        alt="타짜 벨제붑의 노래 포스터">
+
+                    <span class="rank">4</span>
+                    <span class="badge">7.0</span>
+
+                    <div class="info">
+                        <h3>타짜: 벨제붑의 노래</h3>
+                        <p class="year">개봉 2026-09-23</p>
+                        <p class="audience">누적 2,006,480명</p>
+                        <p class="change down">1</p>
+                        <p class="overview">
+                            배신으로 모든 것을 잃은 장태영이 기술을 배운 뒤
+                            글로벌 도박판에서 복수를 펼치는 이야기입니다.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <!-- 5위 클레이페이스 -->
+                <article class="card">
+
+                    <img class="poster"
+                        src="https://image.tmdb.org/t/p/w342/9l1NuFjel2j89hiuiJbsxfblqjy.jpg"
+                        alt="클레이페이스 포스터">
+
+                    <span class="rank">5</span>
+                    <span class="badge">7.5</span>
+
+                    <div class="info">
+                        <h3>클레이페이스</h3>
+                        <p class="year">개봉 2026-10-21</p>
+                        <p class="audience">누적 84,196명</p>
+                        <p class="change down">1</p>
+                        <p class="overview">
+                            점토처럼 변해 타인의 모습으로 변신하는 능력을 얻은 인물이
+                            자신의 삶을 되찾으려 하며 범죄에 빠져드는 이야기입니다.
+                        </p>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            이 사이트는 TMDB API를 사용하지만 TMDB의 보증이나 인증을 받지 않았습니다.
+            This product uses the TMDB API but is not endorsed or certified by TMDB.
+        </p>
+
+        <p>
+            포스터와 영화 정보:
+            TMDB
+            (<a href="https://www.themoviedb.org">
+                https://www.themoviedb.org
+            </a>)
+        </p>
+
+        <p>
+            박스오피스 데이터:
+            영화진흥위원회 영화관입장권통합전산망(KOBIS),
+            기준일 2026-10-27
+        </p>
+
+    </footer>
+
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
